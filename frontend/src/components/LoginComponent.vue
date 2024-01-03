@@ -27,7 +27,7 @@ export default {
           const employees = await response.json();
           const employee = employees.find(emp => emp.name === this.username && emp.password === this.password);
           if (employee) {
-            this.router.push('/about'); 
+            this.router.push('/incidence'); 
           } else {
             alert("Usuario o contraseña incorrecta intentelo de nuevo por favor");
           }
