@@ -6,10 +6,10 @@ import Navbar from './components/NavbarComponent.vue'
 <template>
   <header>
     <Navbar></Navbar>
-      <nav>
+      <!-- <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
-      </nav>
+      </nav> -->
   </header>
 
   <RouterView />
