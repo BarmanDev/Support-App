@@ -15,8 +15,6 @@
             <option disabled value="">Selecciona un tipo</option>
             <option>Hardware</option>
             <option>Software</option>
-            <option>Bien Estar</option>
-            <!-- Añade más opciones según tus necesidades -->
           </select>
         </div>
   
