@@ -4,9 +4,9 @@ import IncidenceList from '../components/IncicdenceListComponent.vue'
 </script>
 
 <template>
-<IncidenceList></IncidenceList>
-</template>
+<IncidenceList />
 
+</template>
 <style>
 
 </style>

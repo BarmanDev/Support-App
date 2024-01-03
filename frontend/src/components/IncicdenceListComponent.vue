@@ -34,6 +34,7 @@
     },
     methods: {
         createIncidence() {
+            this.$router.push('/createincidence');
       },
       editarIncidencia(id) {
       },
@@ -57,18 +58,30 @@
   }
   </script>
   
-  <style lang="scss">
+  <style lang="scss" scoped>
   .incidencias {
     width: 100%;
     padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     h1 {
       text-align: center;
       margin-bottom: 20px;
+      color: #343a40;
     }
     button {
       display: block;
       margin: 0 auto 20px;
       padding: 10px 20px;
+      background-color: #EC4646;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover {
+        background-color: #ce1919;
+      }
     }
     .incidencia {
       display: flex;
@@ -76,9 +89,11 @@
       align-items: center;
       padding: 20px;
       margin-bottom: 10px;
-      border: 1px solid red; 
+      border: 1px solid #ced4da; 
+      border-radius: 4px;
       h2 {
         margin: 0;
+        color: #495057;
       }
       .iconos {
         display: flex;
@@ -94,4 +109,5 @@
     }
   }
   </style>
+  
   
