@@ -53,6 +53,7 @@
         }
       },
       verIncidencia(id) {
+        this.$router.push({ name: 'incidenceView', params: { id: id } });
       }
     }
   }

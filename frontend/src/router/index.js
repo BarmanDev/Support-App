@@ -22,7 +22,13 @@ const router = createRouter({
       name: 'createincidence',
       component: () => import('../views/CreateIncidenceView.vue')
 
+    },
+    {
+      path: '/incidence/:id',
+      name: 'incidenceView',
+      component: () => import('../views/IncidenceView.vue')
     }
+    
   ]
 })
 
