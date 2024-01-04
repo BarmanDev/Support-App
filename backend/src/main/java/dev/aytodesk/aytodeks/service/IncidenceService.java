@@ -17,6 +17,10 @@ public class IncidenceService {
         return incidenceRepository.findAll();
     }
 
+    public Incidence getIncidenceById(Long id) {
+        return incidenceRepository.findById(id).orElse(null);
+    }
+
     public Incidence createIncidence(Incidence incidence) {
         return incidenceRepository.save(incidence);
     }
