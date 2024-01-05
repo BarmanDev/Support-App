@@ -1,37 +1,4 @@
-<template>
-    <div class="crear-incidencia">
-      <h1>Crear Incidencia</h1>
-      <form @submit.prevent="createIncidence">
-        <div class="left-column">
-            <label for="incidencia">Titulo de incidencia</label>
-            <input id="incidencia" v-model="incidencia" required>
-
-  
-          <label for="fecha">Fecha:</label>
-          <input id="fecha" v-model="fecha" required>
-  
-          <label for="tipo">Tipo de problema:</label>
-          <select id="tipo" v-model="tipo" required>
-            <option disabled value="">Selecciona un tipo</option>
-            <option>Hardware</option>
-            <option>Software</option>
-          </select>
-        </div>
-  
-        <div class="right-column">
-          <label for="descripcion">Descripción:</label>
-          <textarea id="descripcion" v-model="descripcion" required></textarea>
-        </div>
-        <div class="submit">
-            <button type="submit">Enviar</button>
-        </div>
-        </form>
-
-
-    </div>
-  </template>
-  
-  <script>
+<script>
   export default {
     data() {
       return {
@@ -74,114 +41,109 @@
     },
   }
   </script>
-  
-  <style lang="scss" scoped>
-  .crear-incidencia {
-    width: 100%;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #343a40;
-    }
-    form {
-      display: flex;
-      justify-content: space-between;
-      label {
-        font-weight: bold;
-        color: #495057;
-      }
-      input, select, textarea {
-        display: block;
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ced4da;
-        border-radius: 4px;
-        color: #495057;
-        margin-bottom: 10px;
-      }
+<template>
+  <div class="crear-incidencia">
+    <h1>CREAR INCIDENCIA</h1>
+    <form @submit.prevent="createIncidence">
+      <div class="form-content">  <!-- nuevo contenedor alrededor de las columnas -->
+        <div class="left-column">
+            <label for="incidencia">Titulo de incidencia</label>
+            <input id="incidencia" v-model="incidencia" required>
 
-      textarea{
-        height: 20rem;
-      }
-      button {
-        margin-top: 20px;
-        padding: 10px 20px;
-        background-color: #EC4646;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        &:hover {
-          background-color: #ce1919;
-        }
-      }
-      .left-column {
-        flex: 1;
-        margin-right: 10px;
-      }
-      .right-column {
-        flex: 2;
+          <label for="fecha">Fecha:</label>
+          <input id="fecha" v-model="fecha" required>
+
+          <label for="tipo">Tipo de problema:</label>
+          <select id="tipo" v-model="tipo" required>
+            <option disabled value="">Selecciona un tipo</option>
+            <option>Hardware</option>
+            <option>Software</option>
+          </select>
+        </div>
+
+        <div class="right-column">
+          <label for="descripcion">Descripción:</label>
+          <textarea id="descripcion" v-model="descripcion" required></textarea>
+        </div>
+      </div>
+      <div class="submit">
+        <button type="submit">Enviar</button>
+      </div>
+    </form>
+  </div>
+</template>
+  
+<style lang="scss" scoped>
+.crear-incidencia {
+  width: 100%;
+  min-height:69vh;  
+  padding: 20px;
+  padding-bottom: 4rem;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #343a40;
+  }
+  form {
+    .form-content {  
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    label {
+      font-weight: bold;
+      color: #495057;
+    }
+    input, select, textarea {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      color: #495057;
+      margin-bottom: 10px;
+    }
+
+    textarea{
+      height: 15rem;
+    }
+    .left-column {
+      flex: 1;
+      margin-right: 10px;
+    }
+    .right-column {
+      flex: 2;
+    }
+  }
+  .submit {
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #EC4646;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left: auto;  
+      margin-right: auto;
+      display: block;
+      &:hover {
+        background-color: #ce1919;
       }
     }
   }
-  </style>
-  
-  <style lang="scss" scoped>
-  .crear-incidencia {
-    width: 100%;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #343a40;
-    }
+  @media (max-width: 600px) {
     form {
-      display: flex;
-      justify-content: space-between;
-      label {
-        font-weight: bold;
-        color: #495057;
-      }
-      input, select, textarea {
-        display: block;
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ced4da;
-        border-radius: 4px;
-        color: #495057;
-        margin-bottom: 10px;
-      }
-
-      textarea{
-        height: 20rem;
-      }
-      button {
-        margin-top: 20px;
-        padding: 10px 20px;
-        background-color: #EC4646;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        &:hover {
-          background-color: #ce1919;
+      .form-content {
+        flex-direction: column;
+        .left-column, .right-column {
+          margin-right: 0;  
         }
-      }
-      .left-column {
-        flex: 1;
-        margin-right: 10px;
-      }
-      .right-column {
-        flex: 2;
       }
     }
   }
-  </style>
-  
+}
+</style>

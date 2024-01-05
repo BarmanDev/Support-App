@@ -1,7 +1,7 @@
 <template>
     <div class="incidencias">
-      <h1>Lista de Incidencias</h1>
-      <button @click="createIncidence">Crear Nueva Incidencia</button>
+      <h1>LISTA DE INCIDENCIAS</h1>
+      <button @click="createIncidence">CREAR NUEVA</button>
       <div class="incidencia" v-for="incidencia in incidencias" :key="incidencia.idIncidence">
         <h2>{{ incidencia.titleIncidence }}</h2>
         <div class="iconos">
@@ -68,6 +68,7 @@
     background-color: #f8f9fa;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    padding-bottom: 7rem;
     h1 {
       text-align: center;
       margin-bottom: 20px;
@@ -102,8 +103,8 @@
         display: flex;
         img {
           cursor: pointer;
-          width: 20px;
-          height: 20px;
+          width: 90px;
+          height: 40px;
           &:not(:last-child) {
             margin-right: 10px;
           }

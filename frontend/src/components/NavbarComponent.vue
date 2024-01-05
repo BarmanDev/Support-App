@@ -15,7 +15,7 @@
         <span class="logo-text">DEPARTAMENTO INFORMÁTICA <br> AYTO DE GIJÓN</span>
         
       </div>
-      <a @click="logout">Logout</a>
+      <a @click="logout">LOGOUT</a>
     </nav>
 </template>
   
@@ -25,14 +25,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
+    a {
+        margin: 1rem;
+      }
     .logo {
       display: flex;
       align-items: center;
       img {
-        width: 100px;
+        margin-left: 2rem;
+        width: 90px;
         margin-right: 10px;
       }
+   
     }
   }
   </style>

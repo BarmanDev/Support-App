@@ -1,24 +1,3 @@
-<template>
-    <div class="crear-incidencia">
-      <h1>Ver Incidencia</h1>
-      <div class="left-column">
-        <label for="incidencia">Titulo de incidencia</label>
-        <input id="incidencia" v-model="incidencia" readonly>
-  
-        <label for="fecha">Fecha:</label>
-        <input id="fecha" v-model="fecha" readonly>
-  
-        <label for="tipo">Tipo de problema:</label>
-        <input id="tipo" v-model="tipo" readonly>
-      </div>
-  
-      <div class="right-column">
-        <label for="descripcion">Descripción:</label>
-        <textarea id="descripcion" v-model="descripcion" readonly></textarea>
-      </div>
-    </div>
-  </template>
-  
   <script>
   export default {
     data() {
@@ -48,19 +27,44 @@
     },
   };
   </script>
+<template>
+      <div class="title">
+        <h1>VER INCIDENCIA </h1>
+    </div>
+    <div class="crear-incidencia">
+
+      <div class="left-column">
+        <label for="incidencia">Titulo de incidencia</label>
+        <input id="incidencia" v-model="incidencia" readonly>
   
+        <label for="fecha">Fecha:</label>
+        <input id="fecha" v-model="fecha" readonly>
+  
+        <label for="tipo">Tipo de problema:</label>
+        <input id="tipo" v-model="tipo" readonly>
+      </div>
+  
+      <div class="right-column">
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" v-model="descripcion" readonly></textarea>
+      </div>
+    </div>
+  </template>
+  
+
   <style lang="scss" scoped>
-  .crear-incidencia {
+.title{
+  background-color: #f8f9fa;
+  margin: 0 auto;
+  padding: 0.2rem;
+}
+.crear-incidencia {
     width: 100%;
     padding: 20px;
-    background-color: #f8f9fa;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #343a40;
-    }
+    background-color: #f8f9fa;
+    padding-bottom: 5rem;
     display: flex;
     justify-content: space-between;
     label {
@@ -99,6 +103,12 @@
     .right-column {
       flex: 2;
     }
+    @media (max-width: 600px) {
+    flex-direction: column;  // cambia la dirección a columna en dispositivos móviles
+    .left-column, .right-column {
+      margin-right: 0;  // elimina el margen derecho en dispositivos móviles
+    }
+  }
   }
   </style>
   

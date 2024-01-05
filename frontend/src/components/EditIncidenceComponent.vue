@@ -1,5 +1,5 @@
 <template>
-    <div class="crear-incidencia">
+    <div class="editar-incidencia">
       <h1>Editar Incidencia</h1>
       <form @submit.prevent="updateIncidence">
         <div class="left-column">
@@ -90,9 +90,11 @@
   </script>
   
   <style lang="scss" scoped>
-  .crear-incidencia {
+  .editar-incidencia {
     width: 100%;
+    min-height:69vh;  
     padding: 20px;
+    padding-bottom: 4rem;
     background-color: #f8f9fa;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
@@ -102,8 +104,11 @@
       color: #343a40;
     }
     form {
-      display: flex;
-      justify-content: space-between;
+      .form-content {  
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
       label {
         font-weight: bold;
         color: #495057;
@@ -117,10 +122,19 @@
         color: #495057;
         margin-bottom: 10px;
       }
-
+  
       textarea{
-        height: 20rem;
+        height: 15rem;
       }
+      .left-column {
+        flex: 1;
+        margin-right: 10px;
+      }
+      .right-column {
+        flex: 2;
+      }
+    }
+    .submit {
       button {
         margin-top: 20px;
         padding: 10px 20px;
@@ -129,16 +143,22 @@
         border: none;
         border-radius: 5px;
         cursor: pointer;
+        margin-left: auto;  
+        margin-right: auto;
+        display: block;
         &:hover {
           background-color: #ce1919;
         }
       }
-      .left-column {
-        flex: 1;
-        margin-right: 10px;
-      }
-      .right-column {
-        flex: 2;
+    }
+    @media (max-width: 600px) {
+      form {
+        .form-content {
+          flex-direction: column;
+          .left-column, .right-column {
+            margin-right: 0;  
+          }
+        }
       }
     }
   }
