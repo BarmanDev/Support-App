@@ -22,7 +22,13 @@ El proyecto esta creado con las siguientes tecnologías,
 | PINIA                | https://pinia.vuejs.org/  |
 | SASS                 | https://sass-lang.com/    |
 
-## Accesos
+## Instalación del proyecto
+
+Clonar el repositorio 
+
+```sh
+https://github.com/BarmanDev/Support-App.git
+```
 
 Iniciar frontend
 
@@ -66,13 +72,13 @@ password:
 
 ### endpoints Employee
 
-### GET Employee
+#### GET Employee
 
 ```sh
 http://localhost:8080/api/v1/employee
 ```
 
-### POST (crear Employee)
+#### POST (crear Employee)
 
 ```sh
 http://localhost:8080/api/v1/employee
@@ -89,7 +95,7 @@ Hay que insertar un JSON para esta petición.
 }
 ```
 
-### POST (editar Employee)
+#### POST (editar Employee)
 
 ```sh
 http://localhost:8080/api/v1/employee/editEmployee/1
@@ -106,7 +112,7 @@ Hay que insertar un JSON para esta petición.
 }
 ```
 
-### DELETE Employee
+#### DELETE Employee
 
 ```sh
 http://localhost:8080/api/v1/employee/deleteEmployee/1
@@ -114,13 +120,13 @@ http://localhost:8080/api/v1/employee/deleteEmployee/1
 
 ### endpoints Incidence
 
-### GET Incidence
+#### GET Incidence
 
 ```sh
 http://localhost:8080/api/v1/incidence/1
 ```
 
-### POST (crear Incidence)
+#### POST (crear Incidence)
 
 ```sh
 http://localhost:8080/api/v1/employee
@@ -137,7 +143,7 @@ Hay que insertar un JSON para esta petición.
 }
 ```
 
-### POST (editar Incidence)
+#### POST (editar Incidence)
 
 ```sh
 http://localhost:8080/api/v1/incidence/editIncidence/1
@@ -155,7 +161,7 @@ Hay que insertar un JSON para esta petición.
 }
 ```
 
-### DELETE Incidence
+#### DELETE Incidence
 
 ```sh
 http://localhost:8080/api/v1/incidence/deleteIncidence/1
