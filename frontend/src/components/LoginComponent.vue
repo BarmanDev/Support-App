@@ -44,7 +44,7 @@ export default {
 <style lang="scss">
 h1 {
   text-align: center;
-  margin: 70px;
+  margin-top: 1rem;
   font-size: 2em;
 
   @media (max-width: 600px) {
@@ -59,7 +59,7 @@ h1 {
   align-items: center;
   width: 30rem;
   height: 20rem;
-  margin: 6.5rem auto;
+  margin: 2.6rem auto;
   padding: 40px;
   background-color: #EC4646;
   input {
