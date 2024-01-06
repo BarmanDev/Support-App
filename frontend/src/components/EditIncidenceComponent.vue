@@ -1,34 +1,4 @@
-<template>
-    <div class="editar-incidencia">
-      <h1>Editar Incidencia</h1>
-      <form @submit.prevent="updateIncidence">
-        <div class="left-column">
-          <label for="incidencia">Titulo de incidencia</label>
-          <input id="incidencia" v-model="incidencia" required>
-  
-          <label for="fecha">Fecha:</label>
-          <input id="fecha" v-model="fecha" required>
-  
-          <label for="tipo">Tipo de problema:</label>
-          <select id="tipo" v-model="tipo" required>
-            <option disabled value="">Selecciona un tipo</option>
-            <option>Hardware</option>
-            <option>Software</option>
-          </select>
-        </div>
-  
-        <div class="right-column">
-          <label for="descripcion">Descripción:</label>
-          <textarea id="descripcion" v-model="descripcion" required></textarea>
-        </div>
-        <div class="submit">
-          <button type="submit">Actualizar</button>
-        </div>
-      </form>
-    </div>
-  </template>
-  
-  <script>
+<script>
   export default {
     data() {
       return {
@@ -88,53 +58,87 @@
     },
   }
   </script>
-  
-  <style lang="scss" scoped>
-  .editar-incidencia {
+
+<template>
+  <div class="title">
+    <h1>EDITAR INCIDENCIA </h1>
+    <router-link to="/incidence" class="back-button">
+      <img class="btn-back" src="../assets/icons/MdiArrowLeftBox.svg" alt="botón atras">
+    </router-link>
+  </div>
+  <div class="crear-incidencia">      
+    <form @submit.prevent="updateIncidence">
+      <div class="form-container">
+        <div class="left-column">
+          <label for="incidencia">Titulo de incidencia</label>
+          <input id="incidencia" v-model="incidencia" required>
+
+          <label for="fecha">Fecha:</label>
+          <input id="fecha" v-model="fecha" required>
+
+          <label for="tipo">Tipo de problema:</label>
+          <select id="tipo" v-model="tipo" required>
+            <option disabled value="">Selecciona un tipo</option>
+            <option>Hardware</option>
+            <option>Software</option>
+          </select>
+        </div>
+        <div class="right-column">
+          <label for="descripcion">Descripción:</label>
+          <textarea id="descripcion" v-model="descripcion" required></textarea>
+        </div>
+      </div>
+      <div class="submit">
+        <button type="submit">Actualizar</button>
+      </div>
+    </form>
+  </div>
+</template>
+
+<style lang="scss" scoped>
+.title {
+  position: relative;
+  background-color: #f8f9fa;
+  margin: 0 auto;
+  padding: 0.4rem;
+}
+
+.btn-back {
+  position: absolute;
+  top: 50%; /* Centra el botón verticalmente */
+  right: 0;
+  transform: translateY(-50%); 
+  margin-right: 1.5rem;
+  width: 4rem; 
+}
+.crear-incidencia {
     width: 100%;
-    min-height:69vh;  
     padding: 20px;
-    padding-bottom: 4rem;
-    background-color: #f8f9fa;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #343a40;
+    background-color: #f8f9fa;
+    padding-bottom: 5rem;
+
+    label {
+      font-weight: bold;
+      color: #495057;
     }
-    form {
-      .form-content {  
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-      label {
-        font-weight: bold;
-        color: #495057;
-      }
-      input, select, textarea {
-        display: block;
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ced4da;
-        border-radius: 4px;
-        color: #495057;
-        margin-bottom: 10px;
-      }
+    input, select, textarea {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      color: #495057;
+      margin-bottom: 10px;
+    }
   
-      textarea{
-        height: 15rem;
-      }
-      .left-column {
-        flex: 1;
-        margin-right: 10px;
-      }
-      .right-column {
-        flex: 2;
-      }
+    textarea{
+      height: 20rem;
     }
     .submit {
+      display: flex;
+      justify-content: center;
       button {
         margin-top: 20px;
         padding: 10px 20px;
@@ -143,23 +147,37 @@
         border: none;
         border-radius: 5px;
         cursor: pointer;
-        margin-left: auto;  
-        margin-right: auto;
-        display: block;
         &:hover {
           background-color: #ce1919;
         }
       }
     }
-    @media (max-width: 600px) {
-      form {
-        .form-content {
-          flex-direction: column;
-          .left-column, .right-column {
-            margin-right: 0;  
-          }
-        }
+    .form-container {
+      display: flex;
+      justify-content: space-between;
+
+
+      @media (max-width: 600px) {
+        flex-direction: column;  
       }
     }
+    .left-column {
+      flex: 1;
+      margin-right: 10px;
+  
+    }
+    .right-column {
+      flex: 2;
+    }
+
+    @media (max-width: 600px) {
+
+      button {  
+        padding: 20px 40px;
+        font-size: 1.2em;
+      } 
+    }
   }
-  </style>
+</style>
+
+  

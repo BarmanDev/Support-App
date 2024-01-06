@@ -44,6 +44,9 @@
 <template>
   <div class="crear-incidencia">
     <h1>CREAR INCIDENCIA</h1>
+    <router-link to="/incidence" class="back-button">
+      <img class="btn-back" src="../assets/icons/MdiArrowLeftBox.svg" alt="botón atras">
+    </router-link>
     <form @submit.prevent="createIncidence">
       <div class="form-content">  <!-- nuevo contenedor alrededor de las columnas -->
         <div class="left-column">
@@ -74,6 +77,15 @@
 </template>
   
 <style lang="scss" scoped>
+
+.btn-back {
+  position: absolute;
+  top: 37%;
+  right: 0;
+  transform: translateY(-50%); 
+  margin-right: 1.5rem;
+  width: 4rem; 
+}
 .crear-incidencia {
   width: 100%;
   min-height:69vh;  

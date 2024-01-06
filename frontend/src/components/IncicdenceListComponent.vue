@@ -1,19 +1,4 @@
-<template>
-    <div class="incidencias">
-      <h1>LISTA DE INCIDENCIAS</h1>
-      <button @click="createIncidence">CREAR NUEVA</button>
-      <div class="incidencia" v-for="incidencia in incidencias" :key="incidencia.idIncidence">
-        <h2>{{ incidencia.titleIncidence }}</h2>
-        <div class="iconos">
-          <img src="../assets/icons/MdiPen.svg" alt="Editar" @click="editarIncidencia(incidencia.idIncidence)">
-          <img src="../assets/icons/MdiTrashCan.svg" alt="Borrar" @click="deleteIncidence(incidencia.idIncidence)">
-          <img src="../assets/icons/MdiEye.svg" alt="Ver" @click="verIncidencia(incidencia.idIncidence)">
-        </div>
-      </div>
-    </div>
-  </template>
-  
-  <script>
+<script>
   export default {
     data() {
       return {
@@ -60,6 +45,21 @@
     }
   }
   </script>
+<template>
+    <div class="incidencias">
+      <h1>LISTA DE INCIDENCIAS</h1>
+      <button @click="createIncidence">CREAR NUEVA</button>
+      <div class="incidencia" v-for="incidencia in incidencias" :key="incidencia.idIncidence">
+        <h2>{{ incidencia.titleIncidence }}</h2>
+        <div class="iconos">
+          <img src="../assets/icons/MdiPen.svg" alt="Editar" @click="editarIncidencia(incidencia.idIncidence)">
+          <img src="../assets/icons/MdiTrashCan.svg" alt="Borrar" @click="deleteIncidence(incidencia.idIncidence)">
+          <img src="../assets/icons/MdiEye.svg" alt="Ver" @click="verIncidencia(incidencia.idIncidence)">
+        </div>
+      </div>
+    </div>
+  </template>
+  
   
   <style lang="scss" scoped>
   .incidencias {
@@ -111,7 +111,23 @@
         }
       }
     }
+    @media (max-width: 600px) {
+
+      button {
+      padding: 20px 40px;
+      font-size: 1.2em;
+    }
+      .incidencia {
+        .iconos {
+          img {
+            width: 60px;
+            height: 30px;
+            &:not(:last-child) {
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
   }
   </style>
-  
-  

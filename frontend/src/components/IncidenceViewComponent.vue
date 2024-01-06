@@ -30,6 +30,9 @@
 <template>
       <div class="title">
         <h1>VER INCIDENCIA </h1>
+        <router-link to="/incidence" class="back-button">
+        <img class="btn-back" src="../assets/icons/MdiArrowLeftBox.svg" alt="botón atras">
+        </router-link>
     </div>
     <div class="crear-incidencia">
 
@@ -53,10 +56,20 @@
   
 
   <style lang="scss" scoped>
-.title{
+.title {
+  position: relative;
   background-color: #f8f9fa;
   margin: 0 auto;
-  padding: 0.2rem;
+  padding: 0.4rem;
+}
+
+.btn-back {
+  position: absolute;
+  top: 50%; /* Centra el botón verticalmente */
+  right: 0;
+  transform: translateY(-50%); 
+  margin-right: 1.5rem;
+  width: 4rem; 
 }
 .crear-incidencia {
     width: 100%;
@@ -104,9 +117,9 @@
       flex: 2;
     }
     @media (max-width: 600px) {
-    flex-direction: column;  // cambia la dirección a columna en dispositivos móviles
+    flex-direction: column;  
     .left-column, .right-column {
-      margin-right: 0;  // elimina el margen derecho en dispositivos móviles
+      margin-right: 0;  
     }
   }
   }
