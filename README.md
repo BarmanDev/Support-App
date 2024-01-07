@@ -69,7 +69,7 @@ user: sa
 password:
 ```
 
-![img_2.png](img_2.png)
+![img.png](./frontend/src/assets/img/readme/h2console.PNG)
 
 ## Uso en Postman
 
@@ -169,3 +169,15 @@ Hay que insertar un JSON para esta petición.
 ```sh
 http://localhost:8080/api/v1/incidence/deleteIncidence/1
 ```
+
+## USER FLOW
+
+![img.png](./frontend/src/assets/img/readme/USER-FLOW.svg)
+
+## DIAGRMA ENTIDAD RELACIÓN
+
+![img.png](./frontend/src/assets/img/readme/relationship-entity.svg)
+
+## MODELO BASE DE DATOS
+
+![img.png](./frontend/src/assets/img/readme/DATA%20BASE%20MODEL.svg)
