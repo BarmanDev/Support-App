@@ -11,7 +11,7 @@ Por otor lado, de frontend se utilizo VUE para crear la interfaz de usuario el c
 
 ## Recursos
 
-El proyecto esta creado con las siguientes tecnologías,
+El proyecto esta creado con las siguientes tecnologías:
 
 | Plugin               | URL                       |
 | -------------------- | ------------------------- |
