@@ -80,7 +80,7 @@
 
 .btn-back {
   position: absolute;
-  top: 37%;
+  top: 28%;
   right: 0;
   transform: translateY(-50%); 
   margin-right: 1.5rem;

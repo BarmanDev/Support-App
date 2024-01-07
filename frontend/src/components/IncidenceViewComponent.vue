@@ -77,7 +77,7 @@
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     background-color: #f8f9fa;
-    padding-bottom: 5rem;
+    padding-bottom: 7.6rem;
     display: flex;
     justify-content: space-between;
     label {
