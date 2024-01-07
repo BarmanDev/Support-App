@@ -6,7 +6,8 @@ Este proyecto se centra en el desarrollo de una API REST en el backend utilizand
 
 Por otor lado, de frontend se utilizo VUE para crear la interfaz de usuario el cual interactua con el backend.
 
-![img.png](img.png)
+![img.png](./frontend/src/assets/img/readme/main.PNG)
+![img.png](./frontend/src/assets/img/readme/list.PNG)
 
 ## Recursos
 
@@ -24,7 +25,7 @@ El proyecto esta creado con las siguientes tecnologías,
 
 ## Instalación del proyecto
 
-Clonar el repositorio 
+Clonar el repositorio
 
 ```sh
 https://github.com/BarmanDev/Support-App.git
@@ -35,6 +36,7 @@ Iniciar frontend
 ```sh
 npm install
 ```
+
 Compilar para desarrollo
 
 ```sh
@@ -48,6 +50,7 @@ npm run build
 ```
 
 Ejecutar test unitarios
+
 ```sh
 npm run test:unit
 ```
