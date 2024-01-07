@@ -169,15 +169,16 @@ Hay que insertar un JSON para esta petición.
 ```sh
 http://localhost:8080/api/v1/incidence/deleteIncidence/1
 ```
+## Diagramas del proyecto 
 
-## USER FLOW
+## User flow
 
 ![img.png](./frontend/src/assets/img/readme/USER-FLOW.svg)
 
-## DIAGRMA ENTIDAD RELACIÓN
+## Diagrama entidad relación
 
 ![img.png](./frontend/src/assets/img/readme/relationship-entity.svg)
 
-## MODELO BASE DE DATOS
+## Modelo base de datos
 
 ![img.png](./frontend/src/assets/img/readme/DATA%20BASE%20MODEL.svg)
