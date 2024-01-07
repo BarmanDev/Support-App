@@ -48,7 +48,7 @@
       <img class="btn-back" src="../assets/icons/MdiArrowLeftBox.svg" alt="botón atras">
     </router-link>
     <form @submit.prevent="createIncidence">
-      <div class="form-content">  <!-- nuevo contenedor alrededor de las columnas -->
+      <div class="form-content"> 
         <div class="left-column">
             <label for="incidencia">Titulo de incidencia</label>
             <input id="incidencia" v-model="incidencia" required>

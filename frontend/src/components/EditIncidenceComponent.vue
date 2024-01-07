@@ -105,7 +105,7 @@
 
 .btn-back {
   position: absolute;
-  top: 50%; /* Centra el botón verticalmente */
+  top: 50%; 
   right: 0;
   transform: translateY(-50%); 
   margin-right: 1.5rem;

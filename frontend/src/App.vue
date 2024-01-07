@@ -7,10 +7,6 @@ import Footer from './components/FooterComponent.vue'
 <template>
   <header>
     <Navbar />
-      <!-- <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav> -->
   </header>
 
   <RouterView />
