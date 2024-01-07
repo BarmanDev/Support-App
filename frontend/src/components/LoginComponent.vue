@@ -46,6 +46,7 @@ h1 {
   text-align: center;
   margin-top: 1rem;
   font-size: 2em;
+  margin: 3rem 0;
 
   @media (max-width: 600px) {
     font-size: 1.5em;
@@ -59,7 +60,8 @@ h1 {
   align-items: center;
   width: 30rem;
   height: 20rem;
-  margin: 2.6rem auto;
+  margin: 0 auto;
+  margin-bottom: 11.4rem;
   padding: 40px;
   background-color: #EC4646;
   input {
